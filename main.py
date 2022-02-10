@@ -1,3 +1,4 @@
+from MyException import *
 
 def main():
     try:
@@ -10,6 +11,9 @@ def main():
     except FileExistsError as e:
         # 例外処理する部分2
         print(e)
+    except Exception as e:
+        print(e)
+        raise MyException()
     else:
         # 例外が発生しない時に実行する文
         print('can open file')
